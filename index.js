@@ -16,7 +16,7 @@ body.append(singleProduct)
 
 async function getData(){
     try{
-    return await fetch('http://makeup-api.herokuapp.com/api/v1/products.json').
+    return await fetch('https://makeup-api.herokuapp.com/api/v1/products.json').
     then(res=>res.json()).
     then(data=>data)
     }
@@ -35,7 +35,7 @@ newData.map(data=>{
     if(!newProduct.includes(data.product_type)){
         newProduct.push(data.product_type)
     product_type.push({name: data.product_type,
-    link : 'http://makeup-api.herokuapp.com/api/v1/products.json?product_type='+data.product_type
+    link : 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type='+data.product_type
     })
     }
 })
